@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Máquina de Refrigerante</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="js.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Lado esquerdo: seleção por botões (fixos como na imagem) -->
+    <aside class="left">
+      <div class="title">
+        <span class="dot"></span>
+        <h2>Escolha seu Refrigerante</h2>
+      </div>
+
+      <div class="btn-grid" id="buttons">
+        <button class="drink-btn" data-drink="Super Coca"><span class="pill">25c</span>🥤 Super Coca</button>
+        <button class="drink-btn" data-drink="Super Coca Light"><span class="pill">25c</span>🥤 Super Coca Light</button>
+        <button class="drink-btn" data-drink="Laranjone"><span class="pill">50c</span>🟠 Laranjone</button>
+        <button class="drink-btn" data-drink="Lemonsplash"><span class="pill">50c</span>🟡 Lemonsplash</button>
+        <button class="drink-btn" data-drink="Água"><span class="pill">1R</span>💧 Água</button>
+        <button class="drink-btn" data-drink="Água com Gás"><span class="pill">1R</span>💧 Água com Gás</button>
+      </div>
+
+      <div class="ws">
+        <h3>Sabores do Web Service</h3>
+        <ul id="ws-list"><li>Carregando…</li></ul>
+      </div>
+      <div class="legend">Preço único: <strong>R$ 2,50</strong>. Arraste moedas para o slot à direita.</div>
+    </aside>
+
+    <!-- Máquina -->
+    <main class="machine-card">
+      <div class="machine-header">
+        <div class="cans">
+          <div class="can"></div><div class="can"></div><div class="can"></div>
+          <div class="can"></div><div class="can"></div><div class="can"></div>
+          <div class="shelf"></div>
+        </div>
+        <div class="console">
+          <div class="display" id="display">R$ 0,00</div>
+          <div class="msg" id="message">Insira moedas e selecione um refrigerante.</div>
+
+          <div class="slot">
+            <div class="drop-zone" id="drop">Slot de Moedas</div>
+            <div class="coins">
+              <div class="coin" draggable="true" data-val="0.25">25c</div>
+              <div class="coin" draggable="true" data-val="0.50">50c</div>
+              <div class="coin" draggable="true" data-val="1.00">1R</div>
+            </div>
+          </div>
+
+          <div class="buy">
+            <button id="buyBtn">Liberar Bebida</button>
+            <small id="selected">Nenhuma bebida selecionada</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray" id="tray">Bandeja de Retirada</div>
+    </main>
+  </div>
+</body>
+</html>
