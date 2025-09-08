@@ -8,8 +8,7 @@
 </head>
 <body>
   <div class="wrap">
-    <!-- Painel esquerdo -->
-    <aside class="left">
+    <div class="left">
       <div class="title">
         <span class="dot"></span>
         <h2>Escolha seu Refrigerante</h2>
@@ -24,17 +23,11 @@
         <button class="drink-btn" data-drink="Água com Gás"><span class="pill">1R</span>💧 Água com Gás</button>
       </div>
 
-      <div class="ws">
-        <h3>Sabores do Web Service</h3>
-        <ul id="ws-list"><li>Carregando…</li></ul>
-      </div>
+      <p class="legend">Preço único: <strong>R$ 2,50</strong>.</p>
+      <p class="legend">Arraste moedas para o slot abaixo das bebidas.</p>
+    </div>
 
-      <p class="legend">Preço único: <strong>R$ 2,50</strong>. Arraste moedas para o slot abaixo das bebidas.</p>
-    </aside>
-
-    <!-- Máquina -->
     <main class="machine-card">
-      <!-- Prateleira -->
       <section class="shelf">
         <img src="img/super_coca.png" alt="Super Coca" class="shelf-item" data-drink="Super Coca">
         <img src="img/super_coca_light.png" alt="Super Coca Light" class="shelf-item" data-drink="Super Coca Light">
@@ -45,7 +38,6 @@
         <div class="shelf-bar"></div>
       </section>
 
-      <!-- Console (agora EMBAIXO da prateleira) -->
       <section class="console console-bottom">
         <div class="display" id="display">R$ 0,00</div>
         <div class="msg" id="message">Insira moedas e selecione um refrigerante.</div>
