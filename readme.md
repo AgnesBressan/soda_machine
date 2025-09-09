@@ -1,3 +1,4 @@
+```markdown
 # Máquina de Refrigerante 🍹
 
 Este projeto implementa uma **máquina de refrigerante virtual** utilizando **HTML, CSS e JavaScript**.  
@@ -33,3 +34,25 @@ O usuário pode escolher diferentes bebidas, inserir moedas (via drag & drop no 
 - No terminal, dentro da pasta do projeto, rode:
   ```bash
   python3 -m http.server 8000 --bind 0.0.0.0
+  ```
+- Abra o navegador em:
+  ```
+  http://localhost:8000
+  ```
+- Se quiser acessar de outro dispositivo na mesma rede (ex.: celular), use o IP da sua máquina:
+  ```
+  http://SEU_IP:8000
+  ```
+
+### Opção 3 — Abrir direto
+- Basta abrir o arquivo `index.html` no navegador.  
+  ⚠️ Porém, o carregamento do **Web Service (AJAX)** pode não funcionar em alguns navegadores por restrição de CORS.
+
+## 👩‍💻 Autoria
+Projeto desenvolvido por **Agnes Bressan de Almeida** para a disciplina  
+**Introdução a Desenvolvimento Web**, ministrada pela professora  
+**Bruna Carolina Rodrigues da Cunha**.
+
+---
+📚 *Este repositório é parte dos estudos práticos da disciplina, com foco em interatividade e manipulação do DOM.*
+```
