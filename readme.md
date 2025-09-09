@@ -1,4 +1,3 @@
-```markdown
 # Máquina de Refrigerante 🍹
 
 Este projeto implementa uma **máquina de refrigerante virtual** utilizando **HTML, CSS e JavaScript**.  
@@ -55,4 +54,3 @@ Projeto desenvolvido por **Agnes Bressan de Almeida** para a disciplina
 
 ---
 📚 *Este repositório é parte dos estudos práticos da disciplina, com foco em interatividade e manipulação do DOM.*
-```
