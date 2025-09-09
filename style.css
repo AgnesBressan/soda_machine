@@ -14,7 +14,7 @@ body{
   background: radial-gradient(1200px 500px at 20% 0%,#1a2046 0,#0b0e1d 45%,#05060f 100%);
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; 
   color:var(--txt);
-  min-height:100svh; 
+  min-height:100svh;
   display:flex; 
   align-items:center; 
   justify-content:center; 
@@ -29,7 +29,6 @@ body{
   justify-content:center; 
 }
 
-/* Left panel */
 .left{ 
   background:linear-gradient(180deg,#171b3a 0,#121633 100%); 
   border:1px solid #262b57; 
@@ -165,14 +164,6 @@ body{
   justify-self: center;
   display: block;
   filter: drop-shadow(0 6px 10px rgba(0,0,0,.25)); 
-}
-
-.shelf-bar{ 
-  grid-column:1/-1; 
-  height:8px; 
-  background:#ccd; 
-  border-radius:5px; 
-  margin-top:6px; 
 }
 
 .console{ 
