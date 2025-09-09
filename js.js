@@ -13,8 +13,7 @@ const selectedText = $('#selected');
 
 function setMessage(text, tone="info"){
   message.textContent = text;
-  message.style.color = tone === "ok" ? "#9effcb" :
-                        tone === "warn" ? "#ffd8a6" : "#cfe";
+  message.className = "msg " + tone;
 }
 
 function updateDisplay(){
@@ -88,3 +87,37 @@ $('#buyBtn').addEventListener('click', ()=>{
   credit = 0;
   updateDisplay();
 });
+
+(async function loadWS(){
+  const list = $('#ws-list');
+  list.innerHTML = '';
+  try {
+    const resp = await fetch('https://api.jsonbin.io/v3/b/68b9f743d0ea881f4071dd7f');
+    if(!resp.ok) throw new Error(resp.statusText);
+    const data = await resp.json();
+    const items = Array.isArray(data?.record) ? data.record : (data?.record?.items || []);
+
+    (items.length ? items : [
+      'Super Coca','Super Coca Light','Laranjone','Lemonsplash','Água','Água com Gás'
+    ]).forEach(n=>{
+      const li = document.createElement('li');
+      li.textContent = n;
+      list.appendChild(li);
+    });
+
+  } catch(e) {
+    const liError = document.createElement('li');
+    liError.textContent = 'Falha ao consultar. Exibindo exemplos.';
+    liError.classList.add('ws-error');
+    list.appendChild(liError);
+
+    ['Super Coca','Super Coca Light','Laranjone','Lemonsplash','Água','Água com Gás']
+      .forEach(n=>{
+        const li = document.createElement('li');
+        li.textContent = n;
+        list.appendChild(li);
+      });
+  }
+})();
+
+updateDisplay();
