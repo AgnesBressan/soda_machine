@@ -66,32 +66,31 @@ body{
   margin-top:6px;
 }
 
-.drink-btn{ 
-  position:relative; 
-  border:none; 
-  border-radius:14px; 
-  padding:12px 12px; 
-  text-align:left; 
-  cursor:pointer; 
-  background:linear-gradient(180deg,#222a63 0,#1b204c 100%); 
-  color:#eef1ff; font-weight:600; 
-  box-shadow:0 6px 16px #0008, inset 0 0 0 1px #3a469d55; 
+.drink-btn{
+  position:relative;
+  border:none;
+  border-radius:14px;
+  padding:12px 12px;
+  text-align:left;
+  cursor:pointer;
+  background:linear-gradient(180deg,#222a63 0,#1b204c 100%);
+  color:#eef1ff; font-weight:600;
+  box-shadow:0 6px 16px #0008, inset 0 0 0 1px #3a469d55;
   transition:.08s transform;
+}
+.drink-btn .pill{
+  position:absolute; 
+  right:10px; top:8px; 
+  padding:3px 8px; 
+  font-size:12px;
+  border-radius:20px;
+  background:#2a325f; 
+  color:#cbd3ff; 
+  border:1px solid #404a8f;
 }
 
 .drink-btn:hover{ transform: translateY(-2px); }
 
-.pill{ 
-  position:absolute; 
-  right:10px; 
-  top:8px; 
-  padding:3px 8px; 
-  font-size:12px; 
-  border-radius:20px; 
-  background:#2a325f; 
-  color:#cbd3ff; 
-  border:1px solid #404a8f; 
-}
 
 .drink-btn.selected{ 
   outline:2px solid var(--mint); 
@@ -118,6 +117,7 @@ body{
   max-height:140px; 
   overflow:auto 
 }
+
 .ws li{ 
   color:#9fb0ff 
 }
@@ -142,33 +142,32 @@ body{
   box-shadow: 0 20px 60px #000a, inset 0 0 0 2px #ffffff14; 
   padding:18px; 
   min-height:560px;
-  max-width: 500px;
+  width: 400px;
   display:grid; 
   grid-template-rows: auto auto 80px; 
   gap:16px;
 }
 
 .shelf{
-  height:230px; 
   background: linear-gradient(180deg,#ffe2d6 0,#fff5ee 100%);
   border-radius:18px; 
   border:1px solid #00000014; 
   padding:16px; 
   position:relative;
   display:grid; 
-  grid-template-columns: repeat(3,1fr); 
+  grid-template-columns: repeat(3,1fr);
   align-items:end; 
   justify-items:center; 
   gap:14px;
 }
 
-.shelf-item{ 
+.shelf-item{
   height: 80px;
-  object-fit:contain; 
-  align-self: end;              
+  object-fit: contain;
+  align-self: end;
   justify-self: center;
-  display: block;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,.25)); 
+  display:block;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.25));
 }
 
 .console{ 
@@ -203,25 +202,13 @@ body{
   box-shadow: inset 0 0 20px #00ff9940; 
 }
 
-.msg {
-  font-size: 14px;
-  min-height: 22px;
-  text-align: center;
-}
+.msg { font-size:14px; min-height:22px; text-align:center; }
+.msg.info { color:#cfe; }
+.msg.ok   { color:#9effcb; }
+.msg.warn { color:#ffd8a6; }
+.msg.error{ color:#ff9b9b; }
 
-.msg.info {
-  color: #cfe;
-}
-.msg.ok {
-  color: #9effcb;
-}
-.msg.warn {
-  color: #ffd8a6;
-}
-.msg.error {
-  color: #ff9b9b;
-}
-
+.ws-error { color:#ffb7b7; font-style: italic; }
 
 .slot-area{ 
   display:flex; 

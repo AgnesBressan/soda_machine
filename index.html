@@ -14,37 +14,17 @@
         <h2>Escolha seu Refrigerante</h2>
       </div>
 
-      <div class="btn-grid" id="buttons">
-        <button class="drink-btn" data-drink="Super Coca"><span class="pill">25c</span>🥤 Super Coca</button>
-        <button class="drink-btn" data-drink="Super Coca Light"><span class="pill">25c</span>🥤 Super Coca Light</button>
-        <button class="drink-btn" data-drink="Laranjone"><span class="pill">50c</span>🟠 Laranjone</button>
-        <button class="drink-btn" data-drink="Lemonsplash"><span class="pill">50c</span>🟡 Lemonsplash</button>
-        <button class="drink-btn" data-drink="Água"><span class="pill">1R</span>💧 Água</button>
-        <button class="drink-btn" data-drink="Água com Gás"><span class="pill">1R</span>💧 Água com Gás</button>
-      </div>
+      <div class="btn-grid" id="buttons"></div>
 
-      <div class="ws">
-        <h3>Sabores do Web Service</h3>
-        <ul id="ws-list"><li>Carregando…</li></ul>
-      </div>
-
-      <p class="legend">Preço único: <strong>R$ 2,50</strong>.</p>
-      <p class="legend">Arraste moedas para o slot abaixo das bebidas.</p>
+      <p class="legend">Arraste moedas (desktop) ou toque nas moedas (mobile) para inserir crédito.</p>
     </div>
 
     <main class="machine-card">
-      <section class="shelf">
-        <img src="img/super_coca.png" alt="Super Coca" class="shelf-item" data-drink="Super Coca">
-        <img src="img/super_coca_light.png" alt="Super Coca Light" class="shelf-item" data-drink="Super Coca Light">
-        <img src="img/laranjone.png" alt="Laranjone" class="shelf-item" data-drink="Laranjone">
-        <img src="img/lemonsplash.png" alt="Lemonsplash" class="shelf-item" data-drink="Lemonsplash">
-        <img src="img/agua.png" alt="Água" class="shelf-item" data-drink="Água">
-        <img src="img/agua_gas.png" alt="Água com Gás" class="shelf-item" data-drink="Água com Gás">
-      </section>
+      <section class="shelf" id="shelf"></section>
 
       <section class="console console-bottom">
         <div class="display" id="display">R$ 0,00</div>
-        <div class="msg" id="message">Insira moedas e selecione um refrigerante.</div>
+        <div class="msg info" id="message">Insira moedas e selecione um refrigerante.</div>
 
         <div class="slot-area">
           <div class="drop-zone" id="drop">Slot de Moedas</div>
